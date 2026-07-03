@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
   <meta name="x-apple-disable-message-reformatting" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="color-scheme" content="light" />
-  <meta name="supported-color-schemes" content="light" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
   <!--[if mso]>
 <noscript>
 <xml>
@@ -534,9 +534,33 @@
 
 
     /* Dark mode: neutralize forced inversions, keep brand colors stable */
-    @media (prefers-color-scheme: dark) {
-      .email-container {
+    @media (prefers-color-scheme: dark) {  
+      body, 
+      .email-wrapper, 
+      .email-container, 
+      table, 
+      td {
         background-color: #000409 !important;
+        color: #ffffff !important;
+      }
+      
+      .section-title {
+        color: #EFC6FF !important;
+      }
+      
+      .footer-text {
+        color: #8a8a8a !important;
+      }      
+
+      [data-ogsc] body, 
+      [data-ogsc] .email-wrapper, 
+      [data-ogsc] .email-container {
+        background-color: #000409 !important;
+      }
+      [data-ogsc] text, 
+      [data-ogsc] p, 
+      [data-ogsc] span {
+        color: #ffffff !important;
       }
     }
   </style>
@@ -545,7 +569,7 @@
 <body style="margin:0; padding:0; background-color:#f2f2f2;">
 
   <!-- Preheader (hidden preview text) -->
-  <!--<div class="preheader">{{ preheaderText }}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>-->
+  <!--<div class="preheader">{{ preheaderText }}</div>-->
 
   <center class="email-wrapper" style="width:100%; background-color:#f2f2f2;">
 
@@ -555,7 +579,7 @@
     <td>
     <![endif]-->
 
-    <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0"
+    <table role="presentation" class="email-container" bgcolor="#000409" style="background-image: linear-gradient(#000409, #000409) !important" width="100%" cellpadding="0" cellspacing="0" border="0"
       align="center">
 
       <!-- ============ HEADER ============ -->
