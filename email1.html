@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="color-scheme" content="light">
-<meta name="supported-color-schemes" content="light">
-<!--[if mso]>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <!--[if mso]>
 <noscript>
 <xml>
 <o:OfficeDocumentSettings>
@@ -19,454 +21,494 @@
   td, th, div, p, a, h1, h2, h3 {font-family: Arial, sans-serif;}
 </style>
 <![endif]-->
-<title>{{ subject }}</title>
+  <title>{{ subject }}</title>
 
-<link href="" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-  /* ==========================================================
+    /* ==========================================================
      RESET
      ========================================================== */
-  html, body { margin: 0 !important; padding: 0 !important; height: 100% !important; width: 100% !important; }
-  * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
-  table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; }
-  table { border-spacing: 0 !important; border-collapse: collapse !important; table-layout: fixed !important; margin: 0 auto !important; }
-  img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; display: block; }
-  a { text-decoration: none; }
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
 
-  /* ==========================================================
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ==========================================================
      BASE (MOBILE-FIRST) — everything below is the default
      rendering for mobile clients and any client that ignores
      media queries (e.g. Outlook desktop).
      ========================================================== */
 
-  .font-bai {
-    font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif;
-  }
-
-  .font-chakra {
-    font-family: 'Chakra Petch', 'Consolas', 'Segoe UI', sans-serif;
-  }
-
-  body {
-    background-color: #f2f2f2;
-    font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
-  }
-
-  .email-wrapper { width: 100%; background-color: #f2f2f2; }
-
-  .email-container {
-    width: 100%;
-    max-width: 620px;
-    margin: 0 auto;
-    background-color: #000409;
-  }
-
-  .content-padding { padding: 24px 20px; }
-
-  .preheader {
-    display: none !important;
-    visibility: hidden;
-    mso-hide: all;
-    font-size: 1px;
-    line-height: 1px;
-    max-height: 0;
-    max-width: 0;
-    opacity: 0;
-    overflow: hidden;
-  }
-
-  .logo {
-    width: 37px;
-    height: 51px;
-    filter: drop-shadow(0 4px 50px rgba(0, 0, 0, 0.4));
-  }
-
-  .footer-text {
-    font-size: 12px;
-    line-height: 18px;
-    color: #8a8a8a;
-  }
-
-  .footer-text a {
-    color: #8a8a8a;
-    text-decoration: underline;
-  }
-
-
-  .header-lead-left { width: 51px; }
-  .header-lead-right { display: none; }
-  .header-lead-text { padding-left: 14px; }
-
-  /* ==========================================================
-     SECTION 1 — decorative background box
-     Mobile/Outlook default: section1-box.png
-     Desktop (min-width:600px): section1-box-d.png
-     ========================================================== */
-  .section1-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section1-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 320px;
-  }
-
-  .section2-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section2-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 259px;
-  }
-
-  .section3-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section3-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 209px;
-  }
-
-  .section4-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section4-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 173px;
-  }
-
-  .section5-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section5-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 269px;
-  }
-
-  .section6-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section6-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 389px;
-  }
-
-  .section7-box {
-    background-image: url('https://emails-liard-seven.vercel.app/images/01/section7-box.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% 100%;
-    height: 485px;
-  }
-
-  /* ==========================================================
-     DESKTOP ENHANCEMENT (min-width: 600px)
-     Only overrides/adds what's needed for wider screens.
-     ========================================================== */
-  @media screen and (min-width:600px){
-    .content-padding { 
-      padding: 0px 48px; 
+    .font-bai {
+      font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif;
     }
 
-    .box-badge,
-    .box-badge img {
-      width: 61px !important;
-      height: 62px !important;
+    .font-chakra {
+      font-family: 'Chakra Petch', 'Consolas', 'Segoe UI', sans-serif;
     }
 
-
-    /* HEADER */
-    .logo {
-      width: 29px!important;
-      height: 40px!important;
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
     }
 
-    .header-bg {
-      height: 250px !important;  
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/header-d.jpg') !important;
+    .email-wrapper {
+      width: 100%;
+      background-color: #f2f2f2;
     }
 
-    .header-text {
-      vertical-align: top !important;
-      padding-top: 10px !important;
-    }
-
-    .header-title {
-      text-align: center !important;
-      font-size: 36px !important;
-      margin-bottom: 8px!important;
-    }
-
-    .header-lead {
-      max-width: 405px;
+    .email-container {
+      width: 100%;
+      max-width: 620px;
       margin: 0 auto;
+      background-color: #000409;
     }
 
-    .header-lead-left{
-      width:31px !important;
-      height:31px !important;
-    }
-
-    .header-lead-left img {
-        width:31px !important;
-        height:31px !important;
-    }
-
-    .header-lead-right{
-        display:table-cell !important;
-        width:31px !important;
-    }
-
-    .header-lead-text{
-        padding:0 5px !important;
-        text-align:center !important;
-    }
-
-    .header-lead-text p {
-        font-size:23px !important;
-    }
-    /* HEADER */
-
-
-    /* SECTION */
-    .section-title {
-      font-size: 24px !important;
-      line-height: 1.2 !important;
-      margin-bottom: 6px!important;
-    }
-    /* SECTION */
-
-
-    /* SECTION 1 */
-    .section1-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section1-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 340px;
-    }
-
-    .section1-box-inner {
-      padding-top: 23px !important;
-      padding-bottom: 23px !important;
-      padding-left: 50px !important;
-      padding-right: 50px !important;
-    }
-
-    .section1-btn {
-      height: 64px !important;
-      font-size: 24px !important;
-      padding-top: 18px !important;
-      padding-bottom: 16px !important;
-    }
-
-    .section1-list {
-      width: 258px !important;
-    }
-
-    .section1-list-item-1 {
-      font-size: 15px !important;
-    }
-
-    .section1-list-item-1 br {
+    .preheader {
       display: none !important;
+      visibility: hidden;
+      mso-hide: all;
+      font-size: 1px;
+      line-height: 1px;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
     }
 
-    
-    /* SECTION 1 */
-
-
-    /* SECTION 2 */
-    .section2-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section2-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 289px!important;
+    .content-padding {
+      padding: 24px 20px;
     }
 
-    .section2-list-td-help {
-      width: 50% !important;
-    }
-    /* SECTION 2 */
-
-
-    /* SECTION 3 */
-    .section3-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section3-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 289px!important;
-    }
-    /* SECTION 3 */
-
-    /* SECTION 4 */
-    .section4-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section4-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 190px!important;
+    @media screen and (min-width:600px) {
+      .content-padding {
+        padding: 0px 48px;
+      }
     }
 
-    .section4-title-container {
-      text-align: center !important;
+
+
+    /* ==========================================================
+    HEADER
+  ========================================================== */
+
+    .logo {
+      width: 37px;
+      height: 51px;
+      filter: drop-shadow(0 4px 50px rgba(0, 0, 0, 0.4));
     }
 
-    .section4-title-td1,
-    .section4-title-td2 {
-      display: none !important;
+    .header-lead-left {
+      width: 51px;
     }
 
-    .section4-lead {
-      font-size: 20px !important;
-    }
-    /* SECTION 4 */
-
-
-    /* SECTION 5 */
-    .section5-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section5-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 275px!important;
-    }
-
-    .section5-box-tr2-td1 {
+    .header-lead-right {
       display: none;
     }
-    /* SECTION 5 */
 
-    /* SECTION 6 */
-    .section6-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section6-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 390px!important;
+    .header-lead-text {
+      padding-left: 14px;
     }
 
-    .section7-td-h1 {
-      height: 6px !important;
-    }
-    /* SECTION 6 */
+    @media screen and (min-width:600px) {
 
-    /* SECTION 7 */
-    .section7-box {
-      background-image: url('https://emails-liard-seven.vercel.app/images/01/section7-box-d.png') !important;
-      width: 508px !important;
-      max-width: 508px !important;
-      margin: 0 auto !important;
-      height: 446px!important;
-    }
+      .logo {
+        width: 29px !important;
+        height: 40px !important;
+      }
 
-    .section7-td-support {
-      padding-left: 40px !important;
-      padding-right: 40px !important;
-    }
+      .header-bg {
+        height: 250px !important;
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/header-d.jpg') !important;
+      }
 
-    .section7-prefer-call,
-    .section7-or-email,
-    .section7-phone-support-times {
-      font-size: 22px !important;
-    }
+      .header-text {
+        vertical-align: top !important;
+        padding-top: 10px !important;
+      }
 
-    .section7-prefer-call a,
-    .section7-or-email a {
-      display: inline-block !important;
-    }
+      .header-title {
+        text-align: center !important;
+        font-size: 36px !important;
+        margin-bottom: 8px !important;
+      }
 
-    .section7-phone-support-hours {
-      font-size: 16px !important;
-    }
+      .header-lead {
+        max-width: 405px;
+        margin: 0 auto;
+      }
 
-    .section7-td-support p {
-      font-size: 16px !important;
-    }
+      .header-lead-left {
+        width: 31px !important;
+        height: 31px !important;
+      }
 
-    .section7-line {
-      display: none !important;
-    }
+      .header-lead-left img {
+        width: 31px !important;
+        height: 31px !important;
+      }
 
-    /* SECTION 7 */
+      .header-lead-right {
+        display: table-cell !important;
+        width: 31px !important;
+      }
 
+      .header-lead-text {
+        padding: 0 5px !important;
+        text-align: center !important;
+      }
 
-    /* FOOTER */
-    .footer-content {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-    /* FOOTER */
-  }
-
-  @media screen and (max-width:413px){
-    .section1-box {      
-      height: auto!important;
+      .header-lead-text p {
+        font-size: 23px !important;
+      }
     }
 
-    .section1-box .section-title {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
+    @media screen and (max-width:400px) {
+      .header-title {
+        font-size: 42px !important;
+      }
     }
 
-    .section1-box-inner {
-      padding-top: 20px !important;  
+    /* ==========================================================
+    HEADER
+  ========================================================== */
+
+
+    /* ==========================================================
+    FOOTER
+  ========================================================== */
+
+    .footer-text {
+      font-size: 12px;
+      line-height: 18px;
+      color: #8a8a8a;
     }
 
-    .section1-list-item-1 {
-      font-size: 15px !important;
+    .footer-text a {
+      color: #8a8a8a;
+      text-decoration: underline;
     }
 
-    .section1-list-item-1 br{
-      display: none !important;
+    @media screen and (min-width:600px) {
+      .footer-content {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
 
+    /* ==========================================================
+    FOOTER
+  ========================================================== */
 
 
 
+    /* ==========================================================
+    SECTION 1 
+  ========================================================== */
 
-    .section2-box {
-      width: 100% !important;
-    }
-
-    .section2-box-inner {
-      padding-right: 10px !important;
-    }
-
-    .section2-list-td-help {
-      width: 38% !important;
-    }
-
-
+    .section1-box,
+    .section2-box,
     .section3-box,
     .section4-box,
     .section5-box,
-    .section6-box ,
+    .section6-box,
     .section7-box {
-      width: 100% !important;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
     }
 
-    .section7-td-support {
-      padding-left: 40px !important;
-      padding-right: 40px !important;
+    .section1-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section1-box.png');
+      height: 320px;
     }
-  }
 
-  @media screen and (max-width:400px){
-    .header-title {
-      font-size: 42px !important;
+    .section2-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section2-box.png');
+      height: 259px;
     }
-  }
 
-  /* Dark mode: neutralize forced inversions, keep brand colors stable */
-  @media (prefers-color-scheme: dark) {
-    .email-container { background-color: #000409 !important; }
-  }
-</style>
+    .section3-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section3-box.png');
+      height: 209px;
+    }
+
+    .section4-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section4-box.png');
+      height: 173px;
+    }
+
+    .section5-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section5-box.png');
+      height: 269px;
+    }
+
+    .section6-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section6-box.png');
+      height: 389px;
+    }
+
+    .section7-box {
+      background-image: url('https://emails-liard-seven.vercel.app/images/01/section7-box.png');
+      height: 485px;
+    }
+
+    @media screen and (min-width:600px) {
+
+      .box-badge,
+      .box-badge img {
+        width: 61px !important;
+        height: 62px !important;
+      }
+
+      /* SECTION */
+      .section-title {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+      }
+
+      .section1-box,
+      .section2-box,
+      .section3-box,
+      .section4-box,
+      .section5-box,
+      .section6-box,
+      .section7-box {
+        width: 508px !important;
+        max-width: 508px !important;
+        margin: 0 auto !important;
+      }
+
+      /* SECTION */
+
+
+      /* SECTION 1 */
+      .section1-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section1-box-d.png') !important;
+        height: 340px;
+      }
+
+      .section1-box-inner {
+        padding-top: 23px !important;
+        padding-bottom: 23px !important;
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+      }
+
+      .section1-btn {
+        height: 64px !important;
+        font-size: 24px !important;
+        padding-top: 18px !important;
+        padding-bottom: 16px !important;
+      }
+
+      .section1-list {
+        width: 258px !important;
+      }
+
+      .section1-list-item-1 {
+        font-size: 15px !important;
+      }
+
+      .section1-list-item-1 br {
+        display: none !important;
+      }
+
+      /* SECTION 1 */
+
+
+      /* SECTION 2 */
+      .section2-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section2-box-d.png') !important;
+        height: 289px !important;
+      }
+
+      .section2-list-td-help {
+        width: 50% !important;
+      }
+
+      /* SECTION 2 */
+
+
+      /* SECTION 3 */
+      .section3-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section3-box-d.png') !important;
+        height: 289px !important;
+      }
+
+      /* SECTION 3 */
+
+      /* SECTION 4 */
+      .section4-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section4-box-d.png') !important;
+        height: 190px !important;
+      }
+
+      .section4-title-container {
+        text-align: center !important;
+      }
+
+      .section4-title-td1,
+      .section4-title-td2 {
+        display: none !important;
+      }
+
+      .section4-lead {
+        font-size: 20px !important;
+      }
+
+      /* SECTION 4 */
+
+
+      /* SECTION 5 */
+      .section5-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section5-box-d.png') !important;
+        height: 275px !important;
+      }
+
+      .section5-box-tr2-td1 {
+        display: none;
+      }
+
+      /* SECTION 5 */
+
+      /* SECTION 6 */
+      .section6-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section6-box-d.png') !important;
+        height: 390px !important;
+      }
+
+      .section7-td-h1 {
+        height: 6px !important;
+      }
+
+      /* SECTION 6 */
+
+      /* SECTION 7 */
+      .section7-box {
+        background-image: url('https://emails-liard-seven.vercel.app/images/01/section7-box-d.png') !important;
+        height: 446px !important;
+      }
+
+      .section7-td-support {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+      }
+
+      .section7-prefer-call,
+      .section7-or-email,
+      .section7-phone-support-times {
+        font-size: 22px !important;
+      }
+
+      .section7-prefer-call a,
+      .section7-or-email a {
+        display: inline-block !important;
+      }
+
+      .section7-phone-support-hours {
+        font-size: 16px !important;
+      }
+
+      .section7-td-support p {
+        font-size: 16px !important;
+      }
+
+      .section7-line {
+        display: none !important;
+      }
+
+      /* SECTION 7 */
+    }
+
+    @media screen and (max-width:413px) {
+      .section1-box {
+        height: auto !important;
+      }
+
+      .section1-box .section-title {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .section1-box-inner {
+        padding-top: 20px !important;
+      }
+
+      .section1-list-item-1 {
+        font-size: 15px !important;
+      }
+
+      .section1-list-item-1 br {
+        display: none !important;
+      }
+
+      .section2-box-inner {
+        padding-right: 10px !important;
+      }
+
+      .section2-list-td-help {
+        width: 38% !important;
+      }
+
+      .section2-box,
+      .section3-box,
+      .section4-box,
+      .section5-box,
+      .section6-box,
+      .section7-box {
+        width: 100% !important;
+      }
+
+      .section7-td-support {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+      }
+    }
+
+
+    /* Dark mode: neutralize forced inversions, keep brand colors stable */
+    @media (prefers-color-scheme: dark) {
+      .email-container {
+        background-color: #000409 !important;
+      }
+    }
+  </style>
 </head>
 
 <body style="margin:0; padding:0; background-color:#f2f2f2;">
@@ -482,11 +524,13 @@
     <td>
     <![endif]-->
 
-    <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+    <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0"
+      align="center">
 
       <!-- ============ HEADER ============ -->
       <tr>
-        <td class="content-padding" style="padding-top:0; padding-left: 0; padding-right: 0; padding-bottom:0;" align="center">
+        <td class="content-padding" style="padding-top:0; padding-left: 0; padding-right: 0; padding-bottom:0;"
+          align="center">
 
           <!--[if gte mso 9]>
           <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:620px; height:250px;">
@@ -494,8 +538,11 @@
           <v:textbox inset="0,0,0,0">
           <![endif]-->
 
-          <div class="header-bg" style="background-image:url('https://emails-liard-seven.vercel.app/images/01/header.jpg'); background-repeat: no-repeat; background-color:#1a0a2e; background-position:top center; background-size:cover; width:100%;">
-            <table class="header-bg" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" background="https://emails-liard-seven.vercel.app/images/01/header.jpg" style="height:470px;background-repeat: no-repeat;background-size: cover;background-position: top center;">
+          <div class="header-bg"
+            style="background-image:url('https://emails-liard-seven.vercel.app/images/01/header.jpg'); background-repeat: no-repeat; background-color:#1a0a2e; background-position:top center; background-size:cover; width:100%;">
+            <table class="header-bg" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+              background="https://emails-liard-seven.vercel.app/images/01/header.jpg"
+              style="height:470px;background-repeat: no-repeat;background-size: cover;background-position: top center;">
               <tr>
                 <td align="center" valign="top" style="padding:20px 20px;">
                   <img class="logo" src="logo.png" width="37" height="51" alt="Logo" />
@@ -505,34 +552,41 @@
                 <td class="header-text" align="left" valign="bottom" style="padding:20px 20px 5px;">
 
                   <!-- Header Title -->
-                  <h1 class="header-title font-chakra" style="color:#ffffff; font-size:50px; line-height:1; font-weight:700; margin:0;">
+                  <h1 class="header-title font-chakra"
+                    style="color:#ffffff; font-size:50px; line-height:1; font-weight:700; margin:0;">
                     GET READY TO EXPERIENCE <div style="color:#9D51D8; display:block;">FRIDAY PLANS!</div>
                   </h1>
                   <!-- Header Title -->
 
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="7"></td></tr></table>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td height="7"></td>
+                    </tr>
+                  </table>
 
                   <!-- Header Lead -->
-                  <table class="header-lead" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                      <tr>
-                          <!-- Left icon -->
-                          <td class="header-lead-left" width="51" valign="middle" align="left">
-                            <img src="images/01/header-lead-icon.png" width="51" height="51" alt="" style="display:block;">
-                          </td>
+                  <table class="header-lead" role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                    border="0">
+                    <tr>
+                      <!-- Left icon -->
+                      <td class="header-lead-left" width="51" valign="middle" align="left">
+                        <img src="images/01/header-lead-icon.png" width="51" height="51" alt="" style="display:block;">
+                      </td>
 
-                          <!-- Text -->
-                          <td class="header-lead-text" valign="middle">
-                            <p class="font-bai" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; margin:0; color:#ffffff; font-size:30px; line-height:1.1; font-weight:500;">
-                              Your Order Has Been&nbsp;Shipped!
-                            </p>
-                          </td>
+                      <!-- Text -->
+                      <td class="header-lead-text" valign="middle">
+                        <p class="font-bai"
+                          style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; margin:0; color:#ffffff; font-size:30px; line-height:1.1; font-weight:500;">
+                          Your Order Has Been&nbsp;Shipped!
+                        </p>
+                      </td>
 
-                          <!-- Right icon -->
-                          <td class="header-lead-right" width="31" valign="middle" align="right">
-                            <img src="images/01/header-lead-icon.png" width="31" height="31" alt="" style="display:block;">
-                          </td>
+                      <!-- Right icon -->
+                      <td class="header-lead-right" width="31" valign="middle" align="right">
+                        <img src="images/01/header-lead-icon.png" width="31" height="31" alt="" style="display:block;">
+                      </td>
 
-                      </tr>
+                    </tr>
                   </table>
                   <!-- Header Lead -->
 
@@ -575,20 +629,25 @@
                     <td class="section1-box-inner" valign="top" style="padding: 30px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section1-number.png" width="50" height="52" alt="02" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section1-number.png" width="50" height="52" alt="02"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                               Track your package&nbsp;by clicking the&nbsp;button below
                             </h2>
                           </td>
                         </tr>
-                        <tr><td height="17"></td></tr>
+                        <tr>
+                          <td height="17"></td>
+                        </tr>
                         <tr>
                           <td align="center">
 
@@ -598,14 +657,15 @@
                                 <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
                                   <![endif]-->
 
-                                  <a href="#" target="_blank" class="section1-btn"
-                                    style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 300px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding: 10px 0; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">                                    
-                                    <span style="vertical-align: middle; display: inline-block; line-height: 23px;">TRACK PACKAGE</span>                                    
-                                    <img src="images/01/i-chevron-right.png" width="10" height="10" alt="" border="0" 
-                                        style="display: inline-block; vertical-align: middle; margin-left: 8px; width: 13px; height: 12px; border: 0; outline: none; text-decoration: none;" />                                        
-                                  </a>
+                            <a href="#" target="_blank" class="section1-btn"
+                              style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 300px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding: 10px 0; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
+                              <span style="vertical-align: middle; display: inline-block; line-height: 23px;">TRACK
+                                PACKAGE</span>
+                              <img src="images/01/i-chevron-right.png" width="10" height="10" alt="" border="0"
+                                style="display: inline-block; vertical-align: middle; margin-left: 8px; width: 13px; height: 12px; border: 0; outline: none; text-decoration: none;" />
+                            </a>
 
-                                  <!--[if mso]>
+                            <!--[if mso]>
                                 </td>
                               </tr>
                             </table>
@@ -613,38 +673,55 @@
 
                           </td>
                         </tr>
-                        <tr><td height="20"></td></tr>
+                        <tr>
+                          <td height="20"></td>
+                        </tr>
                         <tr>
                           <td align="center">
 
-                            <table class="section1-list" role="presentation" width="245" cellpadding="0" cellspacing="0" border="0">
+                            <table class="section1-list" role="presentation" width="245" cellpadding="0" cellspacing="0"
+                              border="0">
                               <tr>
                                 <td width="32" height="32">
-                                  <img src="images/01/section1-i1.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section1-i1.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="8"></td>
                                 <td>
-                                  <span class="section1-list-item-1" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.2;">CARRIER:<br> USPS First Class</span>
+                                  <span class="section1-list-item-1"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.2;">CARRIER:<br>
+                                    USPS First Class</span>
                                 </td>
                               </tr>
-                              <tr><td height="8" colspan="3"></td></tr>
+                              <tr>
+                                <td height="8" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="32" height="32">
-                                  <img src="images/01/section1-i2.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section1-i2.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="8"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">TRACKING NUMBER:<br> <a href="#" style="color:#AA63CF; text-decoration:underline;">9241990109329603875894</a></span>
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">TRACKING
+                                    NUMBER:<br> <a href="#"
+                                      style="color:#AA63CF; text-decoration:underline;">9241990109329603875894</a></span>
                                 </td>
                               </tr>
-                              <tr><td height="8" colspan="3"></td></tr>
+                              <tr>
+                                <td height="8" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="32" height="32">
-                                  <img src="images/01/section1-i3.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section1-i3.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="8"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:rgba(255,255,255,0.72); font-size:14px; line-height:1.2;">It may take up to 24 hours for<br> the tracking progress to update</span>
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:rgba(255,255,255,0.72); font-size:14px; line-height:1.2;">It
+                                    may take up to 24 hours for<br> the tracking progress to update</span>
                                 </td>
                               </tr>
                             </table>
@@ -667,7 +744,7 @@
           </table>
         </td>
       </tr>
-      <!-- ============ SECTION 1 ============ -->      
+      <!-- ============ SECTION 1 ============ -->
 
       <!-- ============ SECTION 2 ============ -->
       <tr>
@@ -689,59 +766,89 @@
                     <td class="section2-box-inner" valign="top" style="padding: 27px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section2-number.png" width="50" height="52" alt="02" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section2-number.png" width="50" height="52" alt="02"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                               What's inside
                             </h2>
                           </td>
                         </tr>
-                        <tr><td height="13"></td></tr>
+                        <tr>
+                          <td height="13"></td>
+                        </tr>
                         <tr>
                           <td align="center">
 
-                            <table class="section2-list" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <table class="section2-list" role="presentation" width="100%" cellpadding="0"
+                              cellspacing="0" border="0">
                               <tr>
                                 <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
-                                  <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
-                                  <img src="images/01/section2-dot.png" width="5" height="5" alt="" style="display:block;" />
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td height="9"></td>
+                                    </tr>
+                                  </table>
+                                  <img src="images/01/section2-dot.png" width="5" height="5" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td>
-                                  <span class="section2-list-item-1" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.4;">
-                                    1 Month Supply of<br> 
-                                    Generic Viagra<br> 
+                                  <span class="section2-list-item-1"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.4;">
+                                    1 Month Supply of<br>
+                                    Generic Viagra<br>
                                     (18 tablets x 100mg)
                                   </span>
                                 </td>
                               </tr>
-                              <tr><td height="6" colspan="3"></td></tr>
+                              <tr>
+                                <td height="6" colspan="3"></td>
+                              </tr>
 
                               <tr>
                                 <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
-                                  <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
-                                  <img src="images/01/section2-dot.png" width="5" height="5" alt="" style="display:block;" />
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td height="9"></td>
+                                    </tr>
+                                  </table>
+                                  <img src="images/01/section2-dot.png" width="5" height="5" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td>
-                                  <span class="section2-list-item-2" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.4;">Friday Plans User Guide for&nbsp;Best&nbsp;Results</span>
+                                  <span class="section2-list-item-2"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:16px; line-height:1.4;">Friday
+                                    Plans User Guide for&nbsp;Best&nbsp;Results</span>
                                 </td>
                               </tr>
-                              <tr><td height="6" colspan="3"></td></tr>
+                              <tr>
+                                <td height="6" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
-                                  <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
-                                  <img src="images/01/section2-dot.png" width="5" height="5" alt="" style="display:block;" />
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td height="9"></td>
+                                    </tr>
+                                  </table>
+                                  <img src="images/01/section2-dot.png" width="5" height="5" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td>
-                                  <span class="section2-list-item-3" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#fff; font-size:16px; line-height:1.4;">Drug & Pharmacy<br> Information Pamphlets</span>
+                                  <span class="section2-list-item-3"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#fff; font-size:16px; line-height:1.4;">Drug
+                                    & Pharmacy<br> Information Pamphlets</span>
                                 </td>
                               </tr>
                             </table>
@@ -768,7 +875,8 @@
 
       <!-- ============ SECTION 3 ============ -->
       <tr>
-        <td class="content-padding" style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
+        <td class="content-padding"
+          style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
 
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
@@ -786,15 +894,18 @@
                     <td class="section3-box-inner" valign="top" style="padding: 27px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section3-number.png" width="50" height="52" alt="03" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section3-number.png" width="50" height="52" alt="03"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                               What to look for:
                             </h2>
                           </td>
@@ -837,8 +948,10 @@
                     <td class="section4-box-inner" valign="top" style="padding: 27px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section4-number.png" width="50" height="52" alt="04" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section4-number.png" width="50" height="52" alt="04"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
@@ -846,26 +959,33 @@
                         <tr>
                           <td align="center">
 
-                            <table class="section4-title-container" role="presentation" width="210" cellpadding="0" cellspacing="0" border="0">
+                            <table class="section4-title-container" role="presentation" width="210" cellpadding="0"
+                              cellspacing="0" border="0">
                               <tr>
                                 <td class="section4-title-td1" width="44" height="44" align="center" valign="middle">
-                                  <img src="images/01/section4-i-user.png" width="44" height="44" alt="" style="display:block;" />
+                                  <img src="images/01/section4-i-user.png" width="44" height="44" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td class="section4-title-td2" width="12"></td>
                                 <td>
-                                  <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                                  <h2 class="section-title"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                                     Invite friends
                                   </h2>
-                                  <p  class="section4-lead" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size: 16px; line-height: 1.2; margin-top:6px; margin-bottom:0;">
-                                    Give <span style="color:#B44FE9;">$10</span>, get <span style="color:#B44FE9;">$15</span>
+                                  <p class="section4-lead"
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size: 16px; line-height: 1.2; margin-top:6px; margin-bottom:0;">
+                                    Give <span style="color:#B44FE9;">$10</span>, get <span
+                                      style="color:#B44FE9;">$15</span>
                                   </p>
                                 </td>
                               </tr>
                             </table>
-                            
+
                           </td>
                         </tr>
-                        <tr><td height="16"></td></tr>
+                        <tr>
+                          <td height="16"></td>
+                        </tr>
                         <tr>
                           <td align="center">
 
@@ -875,12 +995,13 @@
                                 <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
                                   <![endif]-->
 
-                                  <a href="#" target="_blank" class="section4-btn"
-                                    style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">                                    
-                                    <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE FRIENDS</span>                                           
-                                  </a>
+                            <a href="#" target="_blank" class="section4-btn"
+                              style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
+                              <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE
+                                FRIENDS</span>
+                            </a>
 
-                                  <!--[if mso]>
+                            <!--[if mso]>
                                 </td>
                               </tr>
                             </table>
@@ -908,7 +1029,8 @@
 
       <!-- ============ SECTION 5 ============ -->
       <tr>
-        <td class="content-padding" style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
+        <td class="content-padding"
+          style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
 
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
@@ -926,15 +1048,18 @@
                     <td class="section5-box-inner" valign="top" style="padding: 24px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section5-number.png" width="50" height="52" alt="05" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section5-number.png" width="50" height="52" alt="05"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                               GET <span>4</span> more referrals<br> for partner status
                             </h2>
                           </td>
@@ -944,7 +1069,8 @@
                         </tr>
                         <tr>
                           <td align="center">
-                            <img src="images/01/invite-friends-icons.png" style="display: block; margin: 0 auto;" width="255" height="82" alt="">
+                            <img src="images/01/invite-friends-icons.png" style="display: block; margin: 0 auto;"
+                              width="255" height="82" alt="">
                           </td>
                         </tr>
                         <tr>
@@ -959,17 +1085,18 @@
                                 <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
                                   <![endif]-->
 
-                                  <a href="#" target="_blank" class="section5-btn"
-                                    style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, rgba(131, 64, 181, 0.4) -34.49%, rgba(86, 28, 130, 0.4) 44.77%, rgba(156, 51, 235, 0.4) 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">                                    
-                                    <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE FRIENDS</span>                                           
-                                  </a>
+                            <a href="#" target="_blank" class="section5-btn"
+                              style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, rgba(131, 64, 181, 0.4) -34.49%, rgba(86, 28, 130, 0.4) 44.77%, rgba(156, 51, 235, 0.4) 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
+                              <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE
+                                FRIENDS</span>
+                            </a>
 
-                                  <!--[if mso]>
+                            <!--[if mso]>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
-                            
+
                           </td>
                         </tr>
                       </table>
@@ -992,7 +1119,8 @@
 
       <!-- ============ SECTION 6 ============ -->
       <tr>
-        <td class="content-padding" style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
+        <td class="content-padding"
+          style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
 
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
@@ -1010,15 +1138,18 @@
                     <td class="section6-box-inner" valign="top" style="padding: 24px 30px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section6-number.png" width="50" height="52" alt="06" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section6-number.png" width="50" height="52" alt="06"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
                               YOUR PLAN AT A GLANCE
                             </h2>
                           </td>
@@ -1029,56 +1160,72 @@
                         <tr>
                           <td align="center">
 
-                            <table class="section6-list" role="presentation" width="260" cellpadding="0" cellspacing="0" border="0">
+                            <table class="section6-list" role="presentation" width="260" cellpadding="0" cellspacing="0"
+                              border="0">
                               <tr>
                                 <td width="32" height="32" align="center">
-                                  <img src="images/01/section6-icon.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section6-icon.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="10"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
                                     Today's charge: <span style="color:#B44FE9;">$7.91</span>
                                   </span>
                                 </td>
                               </tr>
-                              <tr><td height="8" colspan="3"></td></tr>
+                              <tr>
+                                <td height="8" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="32" height="32" align="center">
-                                  <img src="images/01/section6-icon.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section6-icon.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="10"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
                                     Each month after: <span style="color:#B44FE9;">$17.91</span>
                                   </span>
                                 </td>
                               </tr>
-                              <tr><td height="8" colspan="3"></td></tr>
+                              <tr>
+                                <td height="8" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="32" height="32" align="center">
-                                  <img src="images/01/section6-icon.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section6-icon.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="10"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
-                                    What ships monthly:<br> <span style="color:#B44FE9;">9 × 100mg  Generic Viagra®</span>
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
+                                    What ships monthly:<br> <span style="color:#B44FE9;">9 × 100mg  Generic
+                                      Viagra®</span>
                                   </span>
                                 </td>
                               </tr>
-                              <tr><td height="8" colspan="3"></td></tr>
+                              <tr>
+                                <td height="8" colspan="3"></td>
+                              </tr>
                               <tr>
                                 <td width="32" height="32" align="center">
-                                  <img src="images/01/section6-icon.png" width="32" height="32" alt="" style="display:block;" />
+                                  <img src="images/01/section6-icon.png" width="32" height="32" alt=""
+                                    style="display:block;" />
                                 </td>
                                 <td width="10"></td>
                                 <td>
-                                  <span style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
+                                  <span
+                                    style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color:#ffffff; font-size:15px; line-height:1.2;">
                                     Renews:<br> <span style="color:#B44FE9;">Every 30 days until you cancel</span>
                                   </span>
                                 </td>
                               </tr>
                             </table>
-                            
+
                           </td>
                         </tr>
                         <tr>
@@ -1093,17 +1240,18 @@
                                 <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
                                   <![endif]-->
 
-                                  <a href="#" target="_blank" class="section6-btn"
-                                    style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding-top: 10px; padding-bottom: 10px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">                                    
-                                    <span style="vertical-align: middle; display: inline-block; line-height: 23px;">MANAGE MY PLAN</span>                                           
-                                  </a>
+                            <a href="#" target="_blank" class="section6-btn"
+                              style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding-top: 10px; padding-bottom: 10px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
+                              <span style="vertical-align: middle; display: inline-block; line-height: 23px;">MANAGE MY
+                                PLAN</span>
+                            </a>
 
-                                  <!--[if mso]>
+                            <!--[if mso]>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
-                            
+
                           </td>
                         </tr>
                         <tr>
@@ -1111,7 +1259,10 @@
                         </tr>
                         <tr>
                           <td align="center">
-                            <p style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.2; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">Pause, skip, change your dose, or<br> cancel anytime. Takes 60 seconds.<br> No call needed.</p>
+                            <p
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.2; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">
+                              Pause, skip, change your dose, or<br> cancel anytime. Takes 60 seconds.<br> No call
+                              needed.</p>
                           </td>
                         </tr>
                       </table>
@@ -1134,7 +1285,8 @@
 
       <!-- ============ SECTION 7 ============ -->
       <tr>
-        <td class="content-padding" style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
+        <td class="content-padding"
+          style="padding-top:0; padding-left:16px; padding-right:16px;  padding-bottom: 20px;">
 
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
             <tr>
@@ -1149,19 +1301,23 @@
 
                 <table class="section7-box" role="presentation" width="380" cellpadding="0" cellspacing="0" border="0">
                   <tr>
-                    <td class="section7-box-inner" valign="top" style="padding-top: 24px; padding-bottom: 16px; position:relative;">
+                    <td class="section7-box-inner" valign="top"
+                      style="padding-top: 24px; padding-bottom: 16px; position:relative;">
 
                       <!--[if !mso]><!-->
-                      <div class="box-badge" style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
-                        <img src="images/01/section7-number.png" width="50" height="52" alt="07" style="display:block; width:50px; height:52px;" />
+                      <div class="box-badge"
+                        style="position:absolute; top:4px; left:6px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="images/01/section7-number.png" width="50" height="52" alt="07"
+                          style="display:block; width:50px; height:52px;" />
                       </div>
                       <!--<![endif]-->
 
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center">
-                            <h2 class="section-title" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
-                              Need Help?<br> 
+                            <h2 class="section-title"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                              Need Help?<br>
                               We’re Available 24/7
                             </h2>
                           </td>
@@ -1178,17 +1334,18 @@
                                 <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
                                   <![endif]-->
 
-                                  <a href="#" target="_blank" class="section7-btn"
-                                    style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 172px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">                                    
-                                    <span style="vertical-align: middle; display: inline-block; line-height: 23px;">CHAT</span>                                           
-                                  </a>
+                            <a href="#" target="_blank" class="section7-btn"
+                              style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 172px; max-width: 100%; height: 52px; background: #561C82; background: linear-gradient(0deg, #8340B5 -34.49%, #561C82 44.77%, #9C33EB 116.47%); border-radius: 9px; font-family: 'Bai Jamjuree', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
+                              <span
+                                style="vertical-align: middle; display: inline-block; line-height: 23px;">CHAT</span>
+                            </a>
 
-                                  <!--[if mso]>
+                            <!--[if mso]>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
-                            
+
                           </td>
                         </tr>
                         <tr>
@@ -1196,9 +1353,12 @@
                         </tr>
                         <tr>
                           <td align="center">
-                            <p class="section7-prefer-call" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">
-                              Prefer to call? 
-                              <a href="tel:+18559625303" class="section7-phone" style="color:#ffffff; text-decoration: underline; display:block;"><b>+1 (855) 962-5303</b></a>
+                            <p class="section7-prefer-call"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">
+                              Prefer to call?
+                              <a href="tel:+18559625303" class="section7-phone"
+                                style="color:#ffffff; text-decoration: underline; display:block;"><b>+1 (855)
+                                  962-5303</b></a>
                             </p>
                           </td>
                         </tr>
@@ -1207,8 +1367,11 @@
                         </tr>
                         <tr>
                           <td>
-                            <p class="section7-or-email" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">Or email us at 
-                              <a href="mailto:support@fridayplans.com" style="color:#ffffff; text-decoration: underline; display:block;">support@fridayplans.com</a>
+                            <p class="section7-or-email"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">
+                              Or email us at
+                              <a href="mailto:support@fridayplans.com"
+                                style="color:#ffffff; text-decoration: underline; display:block;">support@fridayplans.com</a>
                             </p>
                           </td>
                         </tr>
@@ -1216,30 +1379,44 @@
                           <td height="12"></td>
                         </tr>
                         <tr>
-                          <td class="section7-line" bgcolor="#552C6E" style="width: 100%; height:1px; line-height:1px; font-size:1px; background-color:#552C6E;"></td>
-                        </tr>
-                        <tr>
-                          <td height="12"></td>
-                        </tr>
-                        <tr>
-                          <td align="center">
-                            <p class="section7-phone-support-hours" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">Phone Support Hours:</p>
-                            <p class="section7-phone-support-times" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 6px;">Mon – Fri 8:00 am – 8 pm EST</p>
-                            <p class="section7-phone-support-times" style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">Sat - Sun  9:30 am – 6 pm EST</p>
+                          <td class="section7-line" bgcolor="#552C6E"
+                            style="width: 100%; height:1px; line-height:1px; font-size:1px; background-color:#552C6E;">
                           </td>
                         </tr>
                         <tr>
                           <td height="12"></td>
                         </tr>
                         <tr>
-                          <td class="section7-line" bgcolor="#552C6E" style="width: 100%; height:1px; line-height:1px; font-size:1px; background-color:#552C6E;"></td>
+                          <td align="center">
+                            <p class="section7-phone-support-hours"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px;">
+                              Phone Support Hours:</p>
+                            <p class="section7-phone-support-times"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 6px;">
+                              Mon – Fri 8:00 am – 8 pm EST</p>
+                            <p class="section7-phone-support-times"
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0;">
+                              Sat - Sun 9:30 am – 6 pm EST</p>
+                          </td>
                         </tr>
                         <tr>
                           <td height="12"></td>
                         </tr>
                         <tr>
-                          <td class="section7-td-support" align="center" style="padding-left: 60px; padding-right: 60px;">
-                            <p style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0; text-transform: capitalize;">Our customer support team is here to help, should you have any questions, concerns, or are not 100% satisfied with your Friday Plans.</p>
+                          <td class="section7-line" bgcolor="#552C6E"
+                            style="width: 100%; height:1px; line-height:1px; font-size:1px; background-color:#552C6E;">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="12"></td>
+                        </tr>
+                        <tr>
+                          <td class="section7-td-support" align="center"
+                            style="padding-left: 60px; padding-right: 60px;">
+                            <p
+                              style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.3; text-align: center; color: #ffffff; margin-top: 0; margin-bottom: 0; text-transform: capitalize;">
+                              Our customer support team is here to help, should you have any questions, concerns, or are
+                              not 100% satisfied with your Friday Plans.</p>
                           </td>
                         </tr>
                       </table>
@@ -1258,43 +1435,64 @@
           </table>
         </td>
       </tr>
-      <!-- ============ SECTION 7 ============ -->      
+      <!-- ============ SECTION 7 ============ -->
 
       <!-- ============ FOOTER ============ -->
       <tr>
         <td class="content-padding" style="padding-top:24px;padding-bottom:24px;" align="center">
 
-          <table class="footer-content" role="presentation" width="290" cellpadding="0" cellspacing="0" border="0" align="center">
+          <table class="footer-content" role="presentation" width="290" cellpadding="0" cellspacing="0" border="0"
+            align="center">
             <tr>
               <td align="center">
                 <img class="footer-logo" src="footer-logo.png" width="80" height="40" alt="Friday Plans" />
               </td>
             </tr>
-            <tr><td height="8"></td></tr>
+            <tr>
+              <td height="8"></td>
+            </tr>
             <tr>
               <td align="center">
-                <p class="footer-text" style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">© Friday Plans, Inc. 2026</p>
-                <p class="footer-text" style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">Friday Plans, Inc 1395 Brickell Ave #800, Miami&nbsp;FL&nbsp;33131</p>
+                <p class="footer-text"
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  © Friday Plans, Inc. 2026</p>
+                <p class="footer-text"
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  Friday Plans, Inc 1395 Brickell Ave #800, Miami&nbsp;FL&nbsp;33131</p>
               </td>
             </tr>
-            <tr><td height="8"></td></tr>
+            <tr>
+              <td height="8"></td>
+            </tr>
             <tr>
               <td align="center">
-                <p class="footer-text" style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;"><a href="#">IMPORTANT SAFETY INFORMATION</a></p>
+                <p class="footer-text"
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  <a href="#">IMPORTANT SAFETY INFORMATION</a></p>
               </td>
             </tr>
-            <tr><td height="8"></td></tr>
+            <tr>
+              <td height="8"></td>
+            </tr>
             <tr>
               <td align="center">
-                <p class="footer-text" style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">* Prescription products require an online consultation with a medical provider who will determine if a prescription is appropriate.</p>
+                <p class="footer-text"
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  * Prescription products require an online consultation with a medical provider who will determine if a
+                  prescription is appropriate.</p>
               </td>
             </tr>
-            <tr><td height="8"></td></tr>
+            <tr>
+              <td height="8"></td>
+            </tr>
             <tr>
               <td align="center">
-                <p class="footer-text" style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">Want to change how you receive these emails?
+                <p class="footer-text"
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  Want to change how you receive these emails?
                   You&nbsp;can&nbsp;<a href="{{ preferencesUrl }}">update&nbsp;your&nbsp;preferences</a> or
-                  <a href="{{ unsubscribeUrl }}">unsubscribe from this list</a>.</p>
+                  <a href="{{ unsubscribeUrl }}">unsubscribe from this list</a>.
+                </p>
               </td>
             </tr>
           </table>
@@ -1314,4 +1512,5 @@
   </center>
 
 </body>
+
 </html>
