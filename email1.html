@@ -130,22 +130,22 @@
      Desktop (min-width:600px): section1-box-d.png
      ========================================================== */
   .section1-box {
-    background-image: url('section1-box.png');
+    background-image: url('https://emails-liard-seven.vercel.app/section1-box.png');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
-    background-color: #0d0d14;
-    border-radius: 16px;
+    background-size: contain;
+    background-size: 100% 100%;
+    /*background-color: #0d0d14;*/
     height: 320px;
   }
 
   .section2-box {
-    background-image: url('section2-box.png');
+    background-image: url('https://emails-liard-seven.vercel.app/section2-box.png');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
     background-size: contain;
-    background-color: #0d0d14;
+    background-size: 100% 100%;
+    /*background-color: #0d0d14;*/
     height: 265px;
   }
 
@@ -164,7 +164,7 @@
 
     .header-bg {
       height: 250px !important;  
-      background-image: url('header-d.jpg') !important;
+      background-image: url('https://emails-liard-seven.vercel.app/header-d.jpg') !important;
     }
 
     .header-text {
@@ -220,7 +220,7 @@
 
     /* SECTION 1 */
     .section1-box {
-      background-image: url('section1-box-d.png') !important;
+      background-image: url('https://emails-liard-seven.vercel.app/section1-box-d.png') !important;
       width: 508px !important;
       max-width: 508px !important;
       margin: 0 auto !important;
@@ -263,7 +263,7 @@
 
     /* SECTION 2 */
     .section2-box {
-      background-image: url('section2-box-d.png') !important;
+      background-image: url('https://emails-liard-seven.vercel.app/section2-box-d.png') !important;
       width: 508px !important;
       max-width: 508px !important;
       margin: 0 auto !important;
@@ -275,6 +275,10 @@
       width: 61px !important;
       height: 62px !important;
     }
+
+    .section2-list-td-help {
+      width: 50% !important;
+    }
     /* SECTION 2 */
 
 
@@ -284,6 +288,53 @@
       max-width: 100% !important;
     }
     /* FOOTER */
+  }
+
+  @media screen and (max-width:413px){
+
+    .header-title {
+      font-size: 42px !important;
+    }
+
+
+
+
+    .section1-box {      
+      height: auto!important;
+    }
+
+    .section1-box .section-title {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    .section1-box-inner {
+      padding-top: 20px !important;  
+    }
+
+    .section1-list-item-1 {
+      font-size: 15px !important;
+    }
+
+    .section1-list-item-1 br{
+      display: none !important;
+    }
+
+
+
+
+
+    .section2-box {
+      width: 100% !important;
+    }
+
+    .section2-box-inner {
+      padding-right: 10px !important;
+    }
+
+    .section2-list-td-help {
+      width: 38% !important;
+    }
   }
 
   /* Dark mode: neutralize forced inversions, keep brand colors stable */
@@ -314,13 +365,13 @@
 
           <!--[if gte mso 9]>
           <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:620px; height:250px;">
-          <v:fill type="frame" src="header-d.jpg" color="#1a0a2e" />
+          <v:fill type="frame" src="https://emails-liard-seven.vercel.app/header-d.jpg" color="#1a0a2e" />
           <v:textbox inset="0,0,0,0">
           <![endif]-->
 
-          <div class="header-bg" style="background-image:url('header.jpg'); background-repeat: no-repeat; background-color:#1a0a2e; background-position:top center; background-size:cover; width:100%;">
+          <div class="header-bg" style="background-image:url('https://emails-liard-seven.vercel.app/header.jpg'); background-repeat: no-repeat; background-color:#1a0a2e; background-position:top center; background-size:cover; width:100%;">
 
-            <table class="header-bg" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" background="header.jpg" style="height:470px;background-repeat: no-repeat;background-size: cover;background-position: top center;">
+            <table class="header-bg" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" background="https://emails-liard-seven.vercel.app/header.jpg" style="height:470px;background-repeat: no-repeat;background-size: cover;background-position: top center;">
               <tr>
                 <td align="center" valign="top" style="padding:20px 20px;">
                   <img class="logo" src="logo.png" width="37" height="51" alt="Logo" />
@@ -391,7 +442,7 @@
                 <!-- Decorative background box: section1-box.png (mobile/Outlook) -> section1-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:340px;">
-                <v:fill type="frame" src="section1-box-d.png" color="#0d0d14" />
+                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/section1-box-d.png" color="#0d0d14" />
                 <v:textbox inset="0,0,0,0">
                 <![endif]-->
 
@@ -407,7 +458,7 @@
                         <tr>
                           <td align="center">
                             <h2 class="section-title" style="color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
-                              Track your package by clicking the&nbsp;button below
+                              Track your package&nbsp;by clicking the&nbsp;button below
                             </h2>
                           </td>
                         </tr>
@@ -505,7 +556,7 @@
                 <!-- Decorative background box: section2-box.png (mobile/Outlook) -> section2-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:289px;">
-                <v:fill type="frame" src="section2-box-d.png" color="#0d0d14" />
+                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/section2-box-d.png" color="#0d0d14" />
                 <v:textbox inset="0,0,0,0">
                 <![endif]-->
 
@@ -531,7 +582,7 @@
 
                             <table class="section2-list" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                               <tr>
-                                <td width="43%"></td>
+                                <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
                                   <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
                                   <img src="section2-dot.png" width="5" height="5" alt="" style="display:block;" />
@@ -547,7 +598,7 @@
                               <tr><td height="6" colspan="3"></td></tr>
 
                               <tr>
-                                <td width="43%"></td>
+                                <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
                                   <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
                                   <img src="section2-dot.png" width="5" height="5" alt="" style="display:block;" />
@@ -558,7 +609,7 @@
                               </tr>
                               <tr><td height="6" colspan="3"></td></tr>
                               <tr>
-                                <td width="43%"></td>
+                                <td width="43%" class="section2-list-td-help"></td>
                                 <td width="16" height="12" align="center" valign="top">
                                   <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="9"></td></tr></table>
                                   <img src="section2-dot.png" width="5" height="5" alt="" style="display:block;" />
