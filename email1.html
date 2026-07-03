@@ -149,12 +149,30 @@
     height: 265px;
   }
 
+  .section3-box {
+    background-image: url('https://emails-liard-seven.vercel.app/section3-box.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-size: 100% 100%;
+    height: 209px;
+  }
+
   /* ==========================================================
      DESKTOP ENHANCEMENT (min-width: 600px)
      Only overrides/adds what's needed for wider screens.
      ========================================================== */
   @media screen and (min-width:600px){
-    .content-padding { padding: 0px 48px; }
+    .content-padding { 
+      padding: 0px 48px; 
+    }
+
+    .box-badge,
+    .box-badge img {
+      width: 61px !important;
+      height: 62px !important;
+    }
+
 
     /* HEADER */
     .logo {
@@ -253,11 +271,7 @@
       display: none !important;
     }
 
-    .section1-box-badge,
-    .section1-box-badge img {
-      width: 61px !important;
-      height: 62px !important;
-    }
+    
     /* SECTION 1 */
 
 
@@ -267,19 +281,22 @@
       width: 508px !important;
       max-width: 508px !important;
       margin: 0 auto !important;
-      height: 289px;
-    }
-
-    .section2-box-badge,
-    .section2-box-badge img {
-      width: 61px !important;
-      height: 62px !important;
+      height: 289px!important;
     }
 
     .section2-list-td-help {
       width: 50% !important;
     }
     /* SECTION 2 */
+
+
+    .section3-box {
+      background-image: url('https://emails-liard-seven.vercel.app/section3-box.png') !important;
+      width: 508px !important;
+      max-width: 508px !important;
+      margin: 0 auto !important;
+      height: 289px!important;
+    }
 
 
     /* FOOTER */
@@ -450,7 +467,7 @@
                   <tr>
                     <td class="section1-box-inner" valign="top" style="padding: 30px 30px; position:relative;">
 
-                      <div class="section1-box-badge" style="position:absolute; top:4px; left:8px; width:50px; height:52px; z-index:2; line-height:0;">
+                      <div class="box-badge" style="position:absolute; top:4px; left:8px; width:50px; height:52px; z-index:2; line-height:0;">
                         <img src="section1-number.png" width="50" height="52" alt="02" style="display:block; width:50px; height:52px;" />
                       </div>
 
@@ -541,9 +558,7 @@
           </table>
         </td>
       </tr>
-      <!-- ============ SECTION 1 ============ -->
-
-      
+      <!-- ============ SECTION 1 ============ -->      
 
       <!-- ============ SECTION 2 ============ -->
       <tr>
@@ -564,7 +579,7 @@
                   <tr>
                     <td class="section2-box-inner" valign="top" style="padding: 27px 30px; position:relative;">
 
-                      <div class="section2-box-badge" style="position:absolute; top:4px; left:8px; width:50px; height:52px; z-index:2; line-height:0;">
+                      <div class="box-badge" style="position:absolute; top:4px; left:8px; width:50px; height:52px; z-index:2; line-height:0;">
                         <img src="section2-number.png" width="50" height="52" alt="02" style="display:block; width:50px; height:52px;" />
                       </div>
 
@@ -639,6 +654,55 @@
         </td>
       </tr>
       <!-- ============ SECTION 2 ============ -->
+
+      <!-- ============ SECTION 3 ============ -->
+      <tr>
+        <td class="content-padding" style="padding-top:0; padding-left:16px; padding-right:16px;">
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+            <tr>
+              <td>
+
+                <!-- Decorative background box: section2-box.png (mobile/Outlook) -> section2-box-d.png (desktop, min-width:600px) -->
+                <!--[if gte mso 9]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:289px;">
+                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/section3-box-d.png" color="#0d0d14" />
+                <v:textbox inset="0,0,0,0">
+                <![endif]-->
+
+                <table class="section3-box" role="presentation" width="380" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="section3-box-inner" valign="top" style="padding: 27px 30px; position:relative;">
+
+                      <div class="box-badge" style="position:absolute; top:4px; left:8px; width:50px; height:52px; z-index:2; line-height:0;">
+                        <img src="section3-number.png" width="50" height="52" alt="03" style="display:block; width:50px; height:52px;" />
+                      </div>
+
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td align="center">
+                            <h2 class="section-title" style="color: #EFC6FF; font-size: 20px; line-height: 1.1; font-weight: 500; margin: 0; text-transform: uppercase;">
+                              What to look for:
+                            </h2>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+
+                <!--[if gte mso 9]>
+                </v:textbox>
+                </v:roundrect>
+                <![endif]-->
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- ============ SECTION 3 ============ -->
 
       
 
