@@ -23,11 +23,9 @@
 <![endif]-->
   <title>{{ subject }}</title>      
 
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css" />  
-
   <!--[if !mso]><!-->
   <style>
-  /*@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');*/
+  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,500;0,600;0,700&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
   </style>
   <!--<![endif]-->
 
@@ -143,7 +141,19 @@
     }
 
     .header-lead-right {
-      display: none;
+      width: 0 !important;
+      max-width: 0 !important;
+      max-height: 0 !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+      padding: 0 !important;
+      mso-hide: all;
+    }
+
+    .header-lead-right img {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
     }
 
     .header-lead-text {
@@ -151,7 +161,6 @@
     }
 
     @media screen and (min-width:600px) {
-
       .logo {
         width: 29px !important;
         height: 40px !important;
@@ -169,8 +178,12 @@
 
       .header-title {
         text-align: center !important;
-        font-size: 36px !important;
         margin-bottom: 8px !important;
+      }
+
+      .header-title,
+      .header-title span {
+        font-size: 36px !important;
       }
 
       .header-lead {
@@ -189,8 +202,17 @@
       }
 
       .header-lead-right {
-        display: table-cell !important;
         width: 31px !important;
+        max-width: 31px !important;
+        max-height: none !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+
+      .header-lead-right img {
+        display: block !important;
+        width: 31px !important;
+        height: 31px !important;
       }
 
       .header-lead-text {
@@ -201,10 +223,11 @@
       .header-lead-text p {
         font-size: 23px !important;
       }
-    }
+    }    
 
     @media screen and (max-width:400px) {
-      .header-title {
+      .header-title,
+      .header-title span {
         font-size: 42px !important;
       }
     }
@@ -326,8 +349,7 @@
       .box-1-btn {
         height: 64px !important;
         font-size: 24px !important;
-        padding-top: 18px !important;
-        padding-bottom: 16px !important;
+        line-height: 64px !important;
       }
 
       .box-1-list {
@@ -447,7 +469,8 @@
     }
 
     @media screen and (max-width:413px) {      
-      .box {
+      .box,
+      .box-1-content {
         width: 100% !important;
       }
 
@@ -466,6 +489,10 @@
 
       .box-1-list-item-1 br {
         display: none !important;
+      }
+
+      .box-1-btn {
+        width: 100% !important;
       }
 
       .box-2-inner {
@@ -531,12 +558,10 @@
               <tr>
                 <td class="header-text" align="left" valign="bottom" style="padding:20px 20px 5px;">
 
-                  <!-- Header Title -->
                   <h1 class="header-title font-chakra"
                     style="color:#ffffff; font-size:50px; line-height:1; font-weight:700; margin:0;">
-                    GET READY TO EXPERIENCE <div style="color:#9D51D8; display:block;">FRIDAY PLANS!</div>
+                    GET READY TO EXPERIENCE<br> <span style="color:#9D51D8; font-size:50px; line-height:1; font-weight:700;">FRIDAY PLANS!</span>
                   </h1>
-                  <!-- Header Title -->
 
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
@@ -544,31 +569,23 @@
                     </tr>
                   </table>
 
-                  <!-- Header Lead -->
                   <table class="header-lead" role="presentation" width="100%" cellpadding="0" cellspacing="0"
                     border="0">
                     <tr>
-                      <!-- Left icon -->
                       <td class="header-lead-left" width="51" valign="middle" align="left">
                         <img src="https://emails-liard-seven.vercel.app/images/01/header-lead-icon.png" width="51" height="51" alt="" style="display:block;">
                       </td>
-
-                      <!-- Text -->
                       <td class="header-lead-text" valign="middle">
                         <p class="font-bai"
                           style="font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; margin:0; color:#ffffff; font-size:30px; line-height:1.1; font-weight:500;">
                           Your Order Has Been&nbsp;Shipped!
                         </p>
                       </td>
-
-                      <!-- Right icon -->
                       <td class="header-lead-right" width="31" valign="middle" align="right">
-                        <img src="https://emails-liard-seven.vercel.app/images/01/header-lead-icon.png" width="31" height="31" alt="" style="display:block;">
+                        <img src="https://emails-liard-seven.vercel.app/images/01/header-lead-icon.png" class="mobile-hide-img" style="display: none; width: 0px; height: 0px;" width="31" height="31" alt="" style="display:block;">
                       </td>
-
                     </tr>
                   </table>
-                  <!-- Header Lead -->
 
                 </td>
               </tr>
@@ -598,8 +615,8 @@
               <td align="center">
 
                 <!--[if gte mso 9]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:340px;">
-                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section1-box-d.png" color="#0d0d14" />
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" fillcolor="#0d0d14" style="width:508px; height:340px;">
+                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section1-box-d.png" />
                 <v:textbox inset="0,64,0,64">
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
@@ -627,22 +644,54 @@
                             <!--[if mso]>
                             <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300">
                               <tr>
-                                <td align="center" bgcolor="#561C82" style="border-radius: 9px;">
-                                  <![endif]-->
-
-                                    <a href="#" target="_blank" class="box-1-btn"
-                                      style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 300px; max-width: 100%; height: 52px; background-color: #561C82; background-image: linear-gradient(0deg, #8340B5 0%, #561C82 45%, #9C33EB 100%); border-radius: 9px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding: 10px 0; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
-                                      <span style="vertical-align: middle; display: inline-block; line-height: 23px;">TRACK
-                                        PACKAGE</span>
-                                      <img src="https://emails-liard-seven.vercel.app/images/01/i-chevron-right.png" width="10" height="10" alt="" border="0"
-                                        style="display: inline-block; vertical-align: middle; margin-left: 8px; width: 13px; height: 12px; border: 0; outline: none; text-decoration: none;" />
+                                <td align="center">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;v-text-anchor:middle;width:300px;" arcsize="18%" stroke="f">
+                                    <v:fill type="gradient" color="#9C33EB" color2="#561C82" angle="0" />
+                                    <w:anchorlock/>
+                                    <a href="#" target="_blank" style="color:#FFFFFF;font-family:'Trebuchet MS', 'Segoe UI', sans-serif;font-size:20px;font-weight:bold;text-transform:uppercase;letter-spacing:0px;display:block;text-align:center;line-height:52px;text-decoration:none;">
+                                      TRACK PACKAGE &nbsp; <img src="https://emails-liard-seven.vercel.app/images/01/i-chevron-right.png" width="13" height="12" style="vertical-align:middle;display:inline-block;" />
                                     </a>
-
-                                  <!--[if mso]>
+                                  </v:roundrect>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table  class="box-1-content" role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300" style="max-width: 100%; width: 300px;">
+                              <tr>
+                                <td align="center" height="52" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(0deg, #8340B5 0%, #561C82 45%, #9C33EB 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); height: 52px;">
+                                  <a href="#" target="_blank" class="box-1-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    TRACK PACKAGE
+                                    <img src="https://emails-liard-seven.vercel.app/images/01/i-chevron-right.png" width="13" height="12" alt="" border="0" style="display: inline-block; vertical-align: middle; margin-left: 8px; border: 0; outline: none; text-decoration: none; padding-bottom: 2px;" />
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
+
+                            <!--[if mso]>
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300" style="width:300px;">
+                              <tr>
+                                <td align="center" valign="middle" height="52" bgcolor="#561C82" style="border-radius: 9px; height: 52px; background-color: #561C82; padding: 0px 10px;">
+                                  <a href="#" target="_blank" style="color:#FFFFFF; font-family:'Trebuchet MS', 'Segoe UI', sans-serif; font-size:20px; font-weight:bold; text-transform:uppercase; text-decoration:none; display:block; line-height:52px; height:52px; width:100%;">
+                                    TRACK PACKAGE &nbsp; <img src="https://emails-liard-seven.vercel.app/images/01/i-chevron-right.png" width="13" height="12" style="vertical-align:middle; display:inline-block;" />
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table class="box-1-content" role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300" style="max-width: 100%; width: 300px;">
+                              <tr>
+                                <td align="center" height="52" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(0deg, #8340B5 0%, #561C82 45%, #9C33EB 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); height: 52px;">
+                                  <a href="#" target="_blank" class="box-1-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    TRACK PACKAGE
+                                    <img src="https://emails-liard-seven.vercel.app/images/01/i-chevron-right.png" width="13" height="12" alt="" border="0" style="display: inline-block; vertical-align: middle; margin-left: 8px; border: 0; outline: none; text-decoration: none; padding-bottom: 2px;" />
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
 
                           </td>
                         </tr>
@@ -719,10 +768,9 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section2-box.png (mobile/Outlook) -> section2-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:510px; height:290px;">
-                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section2-box-d.png" color="#0d0d14" />
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" fillcolor="#0d0d14" style="width:510px; height:290px;">
+                <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section2-box-d.png" />
                 <v:textbox inset="0,0,0,0">
                 <![endif]-->
 
@@ -838,7 +886,6 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section3-box.png (mobile/Outlook) -> section3-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:289px;">
                 <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section3-box-d.png" color="#0d0d14" />
@@ -883,7 +930,6 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section4-box.png (mobile/Outlook) -> section4-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:508px; height:190px;">
                 <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section4-box-d.png" color="#0d0d14" />
@@ -927,22 +973,31 @@
                           <td align="center">
 
                             <!--[if mso]>
-                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300">
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250">
                               <tr>
-                                <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
-                                  <![endif]-->
-
-                                    <a href="#" target="_blank" class="box-4-btn"
-                                      style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background-color: #561C82; background: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); border-radius: 9px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
-                                      <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE
-                                        FRIENDS</span>
-                                    </a>
-
-                                  <!--[if mso]>
+                                <td align="center">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;v-text-anchor:middle;width:250px;" arcsize="18%" stroke="f">
+                                    <v:fill type="gradient" color="#9C33EB" color2="#561C82" angle="180" />
+                                    <w:anchorlock/>
+                                    <center style="color:#FFFFFF;font-family:'Trebuchet MS', 'Segoe UI', sans-serif;font-size:18px;font-weight:bold;text-transform:uppercase;letter-spacing:0px;">
+                                      INVITE FRIENDS
+                                    </center>
+                                  </v:roundrect>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250" style="max-width: 100%; width: 250px;">
+                              <tr>
+                                <td align="center" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);">
+                                  <a href="#" target="_blank" class="box-4-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    <span style="vertical-align: middle; display: inline-block;">INVITE FRIENDS</span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
 
                           </td>
                         </tr>
@@ -973,7 +1028,6 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section5-box.png (mobile/Outlook) -> section5-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:510px; height:275px;">
                 <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section5-box-d.png" color="#0d0d14" />
@@ -1008,22 +1062,31 @@
                           <td align="center">
 
                             <!--[if mso]>
-                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300">
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250">
                               <tr>
-                                <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
-                                  <![endif]-->
-
-                                    <a href="#" target="_blank" class="box-5-btn"
-                                      style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background-color: #561C82; background: linear-gradient(180deg,#8340B566 0%, #561C8266 50%, #9C33EB66 100%); border-radius: 9px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
-                                      <span style="vertical-align: middle; display: inline-block; line-height: 23px;">INVITE
-                                        FRIENDS</span>
+                                <td align="center">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;v-text-anchor:middle;width:250px;" arcsize="18%" stroke="f">
+                                    <v:fill type="gradient" color="#9C33EB" color2="#561C82" angle="180" />
+                                    <w:anchorlock/>
+                                    <a href="#" target="_blank" style="color:#FFFFFF;font-family:'Trebuchet MS', 'Segoe UI', sans-serif;font-size:18px;font-weight:bold;text-transform:uppercase;letter-spacing:0px;display:block;text-align:center;line-height:52px;text-decoration:none;">
+                                      INVITE FRIENDS
                                     </a>
-
-                                  <!--[if mso]>
+                                  </v:roundrect>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250" style="max-width: 100%; width: 250px;">
+                              <tr>
+                                <td align="center" height="52" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(180deg,#8340B566 0%, #561C8266 50%, #9C33EB66 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); height: 52px;">
+                                  <a href="#" target="_blank" class="box-5-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    INVITE FRIENDS
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
 
                           </td>
                         </tr>
@@ -1054,7 +1117,6 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section6-box.png (mobile/Outlook) -> section6-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:510px; height:388px;">
                 <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section6-box-d.png" color="#0d0d14" />
@@ -1154,22 +1216,31 @@
                           <td align="center">
 
                             <!--[if mso]>
-                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300">
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250">
                               <tr>
-                                <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
-                                  <![endif]-->
-
-                                    <a href="#" target="_blank" class="box-6-btn"
-                                      style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 250px; max-width: 100%; height: 52px; background-color: #561C82; background: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); border-radius: 9px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 23px; padding-top: 10px; padding-bottom: 10px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
-                                      <span style="vertical-align: middle; display: inline-block; line-height: 23px;">MANAGE MY
-                                        PLAN</span>
+                                <td align="center">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;v-text-anchor:middle;width:250px;" arcsize="18%" stroke="f">
+                                    <v:fill type="gradient" color="#9C33EB" color2="#561C82" angle="180" />
+                                    <w:anchorlock/>
+                                    <a href="#" target="_blank" style="color:#FFFFFF;font-family:'Trebuchet MS', 'Segoe UI', sans-serif;font-size:20px;font-weight:bold;text-transform:uppercase;letter-spacing:0px;display:block;text-align:center;line-height:52px;text-decoration:none;">
+                                      MANAGE MY PLAN
                                     </a>
-
-                                  <!--[if mso]>
+                                  </v:roundrect>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="250" style="max-width: 100%; width: 250px;">
+                              <tr>
+                                <td align="center" height="52" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); height: 52px;">
+                                  <a href="#" target="_blank" class="box-6-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 20px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    MANAGE MY PLAN
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
 
                           </td>
                         </tr>
@@ -1211,7 +1282,6 @@
             <tr>
               <td align="center">
 
-                <!-- Decorative background box: section7-box.png (mobile/Outlook) -> section7-box-d.png (desktop, min-width:600px) -->
                 <!--[if gte mso 9]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" arcsize="8%" style="width:510px; height:443px;">
                 <v:fill type="frame" src="https://emails-liard-seven.vercel.app/images/01/section7-box-d.png" color="#0d0d14" />
@@ -1239,21 +1309,31 @@
                           <td align="center">
 
                             <!--[if mso]>
-                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="300">
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="172">
                               <tr>
-                                <td align="center" bgcolor="#561C82" style="padding: 20px 0px; border-radius: 9px;">
-                                  <![endif]-->
-
-                                    <a href="#" target="_blank" class="box-7-btn"
-                                      style="box-sizing: border-box; display: inline-block; vertical-align: middle; width: 172px; max-width: 100%; height: 52px; background-color: #561C82; background: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); border-radius: 9px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 23px; padding-top: 12px; padding-bottom: 12px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none; mso-padding-alt: 0px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); filter: drop-shadow(0px 0px 10px #802AC2);">
-                                      <span style="vertical-align: middle; display: inline-block; line-height: 23px;">CHAT</span>
+                                <td align="center">
+                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:52px;v-text-anchor:middle;width:172px;" arcsize="18%" stroke="f">
+                                    <v:fill type="gradient" color="#9C33EB" color2="#561C82" angle="180" />
+                                    <w:anchorlock/>
+                                    <a href="#" target="_blank" style="color:#FFFFFF;font-family:'Trebuchet MS', 'Segoe UI', sans-serif;font-size:18px;font-weight:bold;text-transform:uppercase;letter-spacing:0px;display:block;text-align:center;line-height:52px;text-decoration:none;">
+                                      CHAT
                                     </a>
-
-                                  <!--[if mso]>
+                                  </v:roundrect>
                                 </td>
                               </tr>
                             </table>
                             <![endif]-->
+                            <!--[if !mso]><!-->
+                            <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="172" style="max-width: 100%; width: 172px;">
+                              <tr>
+                                <td align="center" height="52" style="border-radius: 9px; background-color: #561C82; background-image: linear-gradient(180deg,#9C33EB 0%,#561C82 100%); filter: drop-shadow(0px 0px 10px #802AC2); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3); height: 52px;">
+                                  <a href="#" target="_blank" class="box-7-btn" style="box-sizing: border-box; display: block; width: 100%; height: 52px; font-family: 'Bai Jamjuree', 'Trebuchet MS', 'Segoe UI', sans-serif; font-style: normal; font-weight: 700; font-size: 18px; line-height: 52px; text-align: center; text-transform: uppercase; color: #FFFFFF; text-decoration: none; -webkit-text-size-adjust: none;">
+                                    CHAT
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--<![endif]-->
 
                           </td>
                         </tr>
@@ -1362,10 +1442,10 @@
             <tr>
               <td align="center">
                 <p class="footer-text"
-                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: #7a7a7f; margin-top: 0; margin-bottom: 0;">
                   © Friday Plans, Inc. 2026</p>
                 <p class="footer-text"
-                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: #7a7a7f; margin-top: 0; margin-bottom: 0;">
                   Friday Plans, Inc 1395 Brickell Ave #800, Miami&nbsp;FL&nbsp;33131</p>
               </td>
             </tr>
@@ -1375,8 +1455,8 @@
             <tr>
               <td align="center">
                 <p class="footer-text"
-                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
-                  <a href="#">IMPORTANT SAFETY INFORMATION</a></p>
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.6; text-align: center; color: #7a7a7f; margin-top: 0; margin-bottom: 0;">
+                  <a href="#" style="color: #7a7a7f;">IMPORTANT SAFETY INFORMATION</a></p>
               </td>
             </tr>
             <tr>
@@ -1385,7 +1465,7 @@
             <tr>
               <td align="center">
                 <p class="footer-text"
-                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: #7a7a7f; margin-top: 0; margin-bottom: 0;">
                   * Prescription products require an online consultation with a medical provider who will determine if a
                   prescription is appropriate.</p>
               </td>
@@ -1396,10 +1476,10 @@
             <tr>
               <td align="center">
                 <p class="footer-text"
-                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: rgba(255, 255, 255, 0.48); margin-top: 0; margin-bottom: 0;">
+                  style="font-family: 'Space Grotesk', sans-serif; font-size:14px; line-height: 1.4; text-align: center; color: #7a7a7f; margin-top: 0; margin-bottom: 0;">
                   Want to change how you receive these emails?
-                  You&nbsp;can&nbsp;<a href="{{ preferencesUrl }}">update&nbsp;your&nbsp;preferences</a> or
-                  <a href="{{ unsubscribeUrl }}">unsubscribe from this list</a>.
+                  You&nbsp;can&nbsp;<a href="{{ preferencesUrl }}" style="color: #7a7a7f; text-decoration: underline;">update&nbsp;your&nbsp;preferences</a> or
+                  <a href="{{ unsubscribeUrl }}" style="color: #7a7a7f; text-decoration: underline;">unsubscribe from this list</a>.
                 </p>
               </td>
             </tr>
