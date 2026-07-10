@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mjml index.mjml -o index.html",
+    "build": "mkdir -p public && mjml index.mjml -o public/index.html",
     "watch": "nodemon --watch index.mjml -e mjml --exec \"npm run build\"",
     "serve": "live-server --port=3000 --open=index.html --wait=200",
     "dev": "concurrently -k -n MJML,SERVER -c blue,green \"npm:watch\" \"npm:serve\""
