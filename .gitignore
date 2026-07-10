@@ -1,0 +1,65 @@
+# ==============================================================================
+# SECRETS AND LOCAL ENVIRONMENT CONFIGURATIONS
+# ==============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+credentials.json
+
+# ==============================================================================
+# DEPENDENCIES AND PACKAGES
+# ==============================================================================
+node_modules/
+jspm_packages/
+web_modules/
+bower_components/
+vendor/
+
+# ==============================================================================
+# BUILD OUTPUT, CACHE, AND TEMPORARY FILES
+# ==============================================================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================================================================
+# IDE AND TEXT EDITORS
+# ==============================================================================
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# WebStorm / PhpStorm / JetBrains
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ==============================================================================
+# SYSTEM FILES
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
